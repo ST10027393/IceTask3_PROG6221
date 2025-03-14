@@ -55,9 +55,29 @@
             }
         }//rectangle shape calculator
 
+        public class Circle : Shape, ICalculateArea
+        {
+            public double Radius { get; set; }
 
+            // Constructor to initialize name and radius
+            public Circle(string name, double radius) : base(name)
+            {
+                Radius = radius;
+            }
 
+            // Calculate the area of the circle
+            public double CalculateArea()
+            {
+                return Math.PI * Radius * Radius;
+            }
 
+            // Override the Display method to show additional information
+            public override void Display()
+            {
+                base.Display();
+                Console.WriteLine($"Radius: {Radius}, Area: {CalculateArea()}");
+            }
+        }//circle area calculator
 
     }
 }
