@@ -29,6 +29,33 @@
             }
         }//shape class end
 
+        public class Rectangle : Shape, ICalculateArea
+        {
+            public double Width { get; set; }
+            public double Height { get; set; }
+
+            // Constructor to initialize name, width, and height
+            public Rectangle(string name, double width, double height) : base(name)
+            {
+                Width = width;
+                Height = height;
+            }
+
+            // Calculate the area of the rectangle
+            public double CalculateArea()
+            {
+                return Width * Height;
+            }
+
+            // Override the Display method to show additional information
+            public override void Display()
+            {
+                base.Display();
+                Console.WriteLine($"Width: {Width}, Height: {Height}, Area: {CalculateArea()}");
+            }
+        }//rectangle shape calculator
+
+
 
 
 
