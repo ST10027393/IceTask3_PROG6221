@@ -4,7 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Create instances of Rectangle and Circle
+            Rectangle rectangle = new Rectangle("Rectangle", 5, 10);
+            Circle circle = new Circle("Circle", 7);
+
+            // Display details for each shape
+            rectangle.Display();
+            circle.Display();
+
+            // Optionally, display areas directly
+            Console.WriteLine($"Rectangle Area: {rectangle.CalculateArea()}");
+            Console.WriteLine($"Circle Area: {circle.CalculateArea()}");
+
+            Console.ReadLine();
         }//main end
 
         public interface ICalculateArea
