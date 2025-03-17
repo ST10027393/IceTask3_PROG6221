@@ -16,7 +16,7 @@ jobs:
 
     #Setup SDK.NET
     - name: Setup SDK
-      uses: actions/setup-dontnet@v4
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0' # Change to framework used
 
